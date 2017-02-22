@@ -198,12 +198,12 @@ describe('moduleMocker', () => {
         }));
 
         const instance3 = new fnWhichReturns();
-        expect(fn.mock.instances[0]).toBe(instance3);
-        expect(fn.mock.instances[0].name).toBe('test');
+        expect(fnWhichReturns.mock.instances[0]).toBe(instance3);
+        expect(fnWhichReturns.mock.instances[0].name).toBe('test');
 
         const instance4 = new fnWhichReturns();
-        expect(fn.mock.instances[1]).toBe(instance4);
-        expect(fn.mock.instances[1].name).toBe('test');
+        expect(fnWhichReturns.mock.instances[1]).toBe(instance4);
+        expect(fnWhichReturns.mock.instances[1].name).toBe('test');
       });
 
       it('supports clearing mock calls', () => {
